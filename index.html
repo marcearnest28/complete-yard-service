@@ -6,203 +6,154 @@
 
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
+      font-family: Arial, sans-serif;
       background: #2e7d32;
       color: white;
     }
 
-    header {
-      text-align: center;
-      padding: 20px;
-    }
-
-    header img {
-      max-width: 300px;
-      display: block;
-      margin: 0 auto 10px;
-    }
-
-    section {
-      padding: 25px 20px;
-    }
-
-    h2 {
-      text-align: center;
-    }
-
-    .about-container {
+    /* HEADER */
+    .header {
       display: flex;
+      justify-content: space-between;
       align-items: center;
+      padding: 15px 20px;
+      background: white;
+    }
+
+    .header img {
+      height: 60px;
+    }
+
+    .menu {
+      font-size: 28px;
+      color: black;
+    }
+
+    /* HERO */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1598514982881-6c1d8c4cfd0b') center/cover no-repeat;
+      height: 85vh;
+      display: flex;
+      flex-direction: column;
       justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
+      padding: 20px;
+      background-color: rgba(0,0,0,0.5);
+      background-blend-mode: darken;
     }
 
-    .about-container img {
-      width: 100px;
+    .hero h1 {
+      font-size: 36px;
+      max-width: 300px;
     }
 
-    .about-text {
-      max-width: 400px;
-      text-align: center;
+    .hero p {
+      font-size: 18px;
+    }
+
+    .hero button {
+      margin-top: 20px;
+      padding: 15px;
+      background: #00c853;
+      color: white;
+      border: none;
+      font-size: 16px;
     }
 
     /* SERVICES */
     .services {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
+      padding: 30px 20px;
+      background: white;
+      color: black;
+    }
+
+    .services h2 {
+      text-align: center;
     }
 
     .service {
-      background: white;
-      color: black;
-      padding: 15px;
-      width: 140px;
-      text-align: center;
+      margin: 20px 0;
+      position: relative;
+    }
+
+    .service img {
+      width: 100%;
       border-radius: 5px;
+    }
+
+    .service-text {
+      position: absolute;
+      bottom: 10px;
+      left: 15px;
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
     }
 
     /* CONTACT */
     .contact {
       text-align: center;
+      padding: 30px;
     }
 
-    button {
-      padding: 12px 20px;
-      margin-top: 10px;
-      border: none;
+    .contact button {
+      margin-top: 15px;
+      padding: 15px;
       background: black;
       color: white;
-      cursor: pointer;
-    }
-
-    /* REVIEWS */
-    .reviews {
-      max-width: 400px;
-      margin: auto;
-    }
-
-    input, textarea {
-      width: 100%;
-      margin: 5px 0;
-      padding: 8px;
       border: none;
     }
-
-    .review-box {
-      background: white;
-      color: black;
-      padding: 10px;
-      margin-top: 10px;
-      border-radius: 5px;
-    }
-
   </style>
 </head>
 
 <body>
 
-<header>
+<!-- HEADER -->
+<div class="header">
   <img src="logo.jpg">
-  <h1>Complete Yard Service LLC</h1>
-  <p>Serving the community since 2014</p>
-</header>
+  <div class="menu">☰</div>
+</div>
 
-<section>
-  <h2>About Us</h2>
+<!-- HERO -->
+<div class="hero">
+  <h1>Local People. Great Service.</h1>
+  <p>Complete Yard Service LLC</p>
+  <button onclick="window.location.href='tel:8504472714'">
+    Call Now
+  </button>
+</div>
 
-  <div class="about-container">
-    <img src="logo.jpg">
-
-    <div class="about-text">
-      Complete Yard Service LLC has been proudly serving the community since 2014.
-      Family-owned and operated, we take pride in delivering reliable, high-quality lawn care
-      with attention to detail. From regular mowing to full yard cleanups, we treat every property
-      like it's our own. Our goal is simple — keep your yard looking clean, sharp, and well-maintained
-      all year round.
-    </div>
-
-    <img src="logo.jpg">
-  </div>
-</section>
-
-<section>
+<!-- SERVICES -->
+<div class="services">
   <h2>Our Services</h2>
 
-  <div class="services">
-    <div class="service">Mowing</div>
-    <div class="service">Raking</div>
-    <div class="service">Trimming</div>
-    <div class="service">Edging</div>
-    <div class="service">Blowing</div>
-    <div class="service">Yard Grooming</div>
-    <div class="service">Cleanup</div>
-    <div class="service">Pressure Washing</div>
+  <div class="service">
+    <img src="https://images.unsplash.com/photo-1591824438708-ce405f36ba3d">
+    <div class="service-text">Lawn Care</div>
   </div>
-</section>
 
-<section class="contact">
+  <div class="service">
+    <img src="https://images.unsplash.com/photo-1560749003-f4b1e17e2f6c">
+    <div class="service-text">Yard Cleanup</div>
+  </div>
+
+  <div class="service">
+    <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449">
+    <div class="service-text">Pressure Washing</div>
+  </div>
+
+</div>
+
+<!-- CONTACT -->
+<div class="contact">
   <h2>Call for Free Estimates</h2>
   <p>Chris: 850-447-2714</p>
   <p>Tommy: 850-447-1875</p>
 
   <button onclick="window.location.href='tel:8504472714'">
-    Call Now
+    Contact Us
   </button>
-</section>
-
-<section>
-  <h2>Customer Reviews</h2>
-
-  <div class="reviews">
-    <input id="name" placeholder="Your Name">
-    <textarea id="review" placeholder="Write your review"></textarea>
-    <button onclick="addReview()">Submit Review</button>
-
-    <div id="reviewList"></div>
-  </div>
-</section>
-
-<script>
-function addReview() {
-  const name = document.getElementById("name").value;
-  const review = document.getElementById("review").value;
-
-  if(name === "" || review === "") {
-    alert("Please fill everything out");
-    return;
-  }
-
-  let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
-
-  reviews.push({name, review});
-  localStorage.setItem("reviews", JSON.stringify(reviews));
-
-  displayReviews();
-
-  document.getElementById("name").value = "";
-  document.getElementById("review").value = "";
-}
-
-function displayReviews() {
-  const reviewList = document.getElementById("reviewList");
-  reviewList.innerHTML = "";
-
-  let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
-
-  reviews.forEach(r => {
-    const div = document.createElement("div");
-    div.className = "review-box";
-    div.innerHTML = "<strong>" + r.name + "</strong><p>" + r.review + "</p>";
-    reviewList.appendChild(div);
-  });
-}
-
-displayReviews();
-</script>
+</div>
 
 </body>
 </html>
